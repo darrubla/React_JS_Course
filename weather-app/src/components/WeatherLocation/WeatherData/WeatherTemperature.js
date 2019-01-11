@@ -6,7 +6,7 @@ import "./styles.css";
 const WeatherTemperature = ({ temperature }) =>(
     <div className="weather-temperature">
         <span className="temperature-value">{`${temperature}`}</span>
-        <span className="temperature">{' K'}</span>
+        <span className="temperature">{' C°'}</span>
     </div>
 );
 
