@@ -1,32 +1,23 @@
 import React, {Component} from 'react';
 import Location from './Location.js';
 import WeatherData from './WeatherData';
+import { api_weather } from './../constants/api_url'
+import CircularProgress from '@material-ui/core/CircularProgress';
 import './styles.css';
 
-const location = "Barranquilla,co";
-const api_key = "28ab7a2b69f8abfffd19778a0fea66b6";
-const url_base_weather = "http://api.openweathermap.org/data/2.5/weather";
-
-const api_weather = `${url_base_weather}?q=${location}&appid=${api_key}`;
-
-
-const data = {
-    temperature: 0,
-    humidity: 0,
-    wind: '',
-}
 // const WeatherLocation = () => (
 //     <div className="weather-location-cont">
 //         <Location city={"Barranquilla"}></Location>
 //         <WeatherData data={data}></WeatherData>
 //     </div>
 // );
+
 class WeatherLocation extends Component {
     constructor(){
         super();
         this.state ={
-            city: location,
-            data: data,
+            city: "Somewhere in the World...",
+            data: null,
         };
 
         this.handleUpdateClick = this.handleUpdateClick.bind(this);
@@ -44,7 +35,7 @@ class WeatherLocation extends Component {
             console.log(temp, humd, wind_speed);
 
             const new_data = {
-                temperature: Number(temp - 273.15).toFixed(2),
+                temperature: Number((temp - 273.15).toFixed(2)),
                 humidity: humd,
                 wind: wind_speed,
             }
@@ -63,9 +54,12 @@ class WeatherLocation extends Component {
         const {city, data} = this.state;
         return (
             <div className="weather-location-cont">
-                {this.handleUpdateClick()}
+                {/* {this.handleUpdateClick()} */}
                 <Location city={city}></Location>
-                <WeatherData data={data}></WeatherData>
+                {data ?
+                    <WeatherData data={data}></WeatherData> :
+                    <CircularProgress color="primary"></CircularProgress>
+                }
                 {/* <button onClick={this.handleUpdateClick}>Actualizar</button> */}
             </div>
         );
