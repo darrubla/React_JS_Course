@@ -35,13 +35,26 @@ class WeatherLocation extends Component {
             return resolve.json();
         }).then(data =>{
             console.log(data);
+            var temp = data.main.temp;
+            var humd = data.main.humidity;
+            var wind_speed = data.wind.speed
+
+            console.log(temp, humd, wind_speed);
+
+            const new_data = {
+                temperature: temp,
+                humidity: humd,
+                wind: wind_speed,
+            }
+
+            this.setState({
+                data: new_data,
+            });
+
             debugger;
         });
 
         console.log("Hola, si funciona el botón actualizar");
-        // this.setState({
-        //     data: data2,
-        // });
     }
     render() {
         const {city, data} = this.state;
