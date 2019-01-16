@@ -13,9 +13,9 @@ const Location = (props) =>{
 
     return (
         <div className="location-cont">
-            <h1>
+            <h3>
                 {city}
-            </h1>
+            </h3>
         </div>
     );
 

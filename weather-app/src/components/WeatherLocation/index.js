@@ -41,7 +41,7 @@ class WeatherLocation extends Component {
             console.log(temp, humd, wind_speed);
 
             const new_data = {
-                temperature: Number((temp - 273.15).toFixed(2)),
+                temperature: Number((temp - 273.15).toFixed(1)),
                 humidity: humd,
                 wind: wind_speed,
             }
@@ -50,10 +50,7 @@ class WeatherLocation extends Component {
                 data: new_data,
             });
 
-            debugger;
         });
-
-        console.log("Hola, si funciona el botón actualizar");
     }
     render() {
 
