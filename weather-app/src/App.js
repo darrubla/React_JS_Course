@@ -15,6 +15,9 @@ const cities = [
   'Barranquilla,co',
   'Bogota,co',
   'Sincelejo,co',
+  'Madrid,es',
+  'Paris,fr',
+  'Barcelona,es'
 ];
 
 

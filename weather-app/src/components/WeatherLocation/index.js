@@ -43,7 +43,7 @@ class WeatherLocation extends Component {
             const new_data = {
                 temperature: Number((temp - 273.15).toFixed(1)),
                 humidity: humd,
-                wind: wind_speed,
+                wind: `${wind_speed} m/s`,
             }
 
             this.setState({

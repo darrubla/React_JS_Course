@@ -31,6 +31,12 @@
   }
 }
 
+@media (max-width: 64em) {
+  .detail {
+    height: 35vh;
+  }
+}
+
 .green {
   background: green;
   height: 100px;

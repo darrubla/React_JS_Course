@@ -1,4 +1,16 @@
+.location-list {
+    height: 85vh;
+    overflow: auto;
+}
 
+.header-forecast {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.progress {
+    align-content: center;
+}
 
 @media (max-width: 64em) {
     .location-list {
@@ -6,4 +18,11 @@
         overflow: auto;
         margin-bottom: 20px;
     }
+}
+
+.detail {
+    background: #ffffff;
+    height: 95vh;
+    width: 85%;
+    overflow: auto;
 }
