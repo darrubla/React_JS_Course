@@ -22,7 +22,12 @@
 
 .detail {
     background: #ffffff;
-    height: 95vh;
-    width: 85%;
+    height: 80vh;
+    width: 100%;
     overflow: auto;
+}
+
+.detail-2 {
+    background: #ffffff;
+    width: 100%;
 }

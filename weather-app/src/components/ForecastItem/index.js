@@ -6,7 +6,7 @@ import './../WeatherLocation/styles.css'
 
 const ForecastItem = ({ weekDay, hour, data }) => (
    <div className='weather-location-cont'>
-        <div>{weekDay} Hora: {hour} hs </div>
+        <div className='hour-info-text'>{weekDay} - {hour}:00 hs </div>
         <WeatherData data={data}></WeatherData>
    </div>
 );

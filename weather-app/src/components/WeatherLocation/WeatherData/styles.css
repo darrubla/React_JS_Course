@@ -1,11 +1,12 @@
 .weather-data-cont {
     background-color: rgba(200, 200, 200, 0.5);
-    width: 100%;
+    width: 90%;
     height: 100px;
     line-height: 100px;
     border-radius: 7px;
     padding: 5px;
     box-sizing: border-box;
+    margin-left: 30px;
 }
 
 .weather-extra-info {
@@ -21,6 +22,7 @@
 .weather-temperature {
     width: 60%;
     display: inline-block;
+    text-align: center;
 }
 
 .temperature-value {

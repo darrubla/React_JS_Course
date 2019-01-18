@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { createStore } from 'redux';
+// import { store } from './store';
+import { createStore } from  'redux';
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Paper from '@material-ui/core/Paper';
 import AppBar from '@material-ui/core/AppBar';

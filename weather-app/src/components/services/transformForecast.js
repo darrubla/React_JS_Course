@@ -6,7 +6,7 @@ const transformForecast = data =>
   data.list
     .filter(
       item =>
-        moment.unix(item.dt).hour() === 10 ||
+        moment.unix(item.dt).hour() === 7 ||
         moment.unix(item.dt).hour() === 16
     )
     .map(item => ({

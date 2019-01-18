@@ -15,7 +15,7 @@
     "redux": "^4.0.1"
   },
   "scripts": {
-    "remotedev": "remotedev --hostname=localhost --port=3000",
+    "remotedev": "remotedev --hostname=localhost --port=8000",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
