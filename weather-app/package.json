@@ -10,9 +10,12 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-flexbox-grid": "^2.1.2",
-    "react-scripts": "2.1.1"
+    "react-redux": "^6.0.0",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1"
   },
   "scripts": {
+    "remotedev": "remotedev --hostname=localhost --port=3000",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -26,5 +29,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "remote-redux-devtools": "^0.5.16"
+  }
 }
