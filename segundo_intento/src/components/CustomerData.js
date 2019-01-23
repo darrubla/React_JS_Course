@@ -7,8 +7,8 @@ const CustomerData = ({name, dni, age}) => {
             <div className="customer-app-data">
                 <h2>Client Data</h2>
                 <div><strong>Nombre</strong><i>{name}</i></div>
-                <div><strong><i>DNI</i></strong></div>
-                <div><strong><i>Edad</i></strong></div>
+                <div><strong><i>DNI</i></strong>{dni}</div>
+                <div><strong><i>Edad</i></strong>{age}</div>
             </div>
         </div>
     );

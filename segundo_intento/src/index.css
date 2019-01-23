@@ -31,3 +31,11 @@ code {
   height: 30px;
   margin: 5px;
 }
+
+.customer-list-item .field {
+  width: 160px;
+  margin: 1px;
+  padding: 4px;
+  background: #eeeeee;
+  display: inline-block;
+}

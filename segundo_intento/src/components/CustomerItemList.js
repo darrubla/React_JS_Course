@@ -2,12 +2,12 @@ import React from 'react';
 import { Link, BrowserRouter as Router } from 'react-router-dom'
 import PropTypes from 'prop-types';
 
-const CustomerItemList = ({name, editAction, delAction, urlPath, dni}) => {
+const CustomerItemList = ({customer, editAction, delAction, urlPath, dni}) => {
     return (
         <div>
             <div className="customer-list-item">
                 <div className="field">
-                    <Link to={`${urlPath}${dni}`}>{name}</Link>
+                    <Link to={`${urlPath}${dni}`}>{customer}</Link>
                 </div>
                 <div className="field">
                     <Link to={`${urlPath}${dni}/edit`}>{editAction}</Link>
@@ -22,7 +22,7 @@ const CustomerItemList = ({name, editAction, delAction, urlPath, dni}) => {
 
 CustomerItemList.propTypes = {
     dni: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    customer: PropTypes.string.isRequired,
     editAction: PropTypes.string.isRequired,
     delAction: PropTypes.string.isRequired,
     urlPath: PropTypes.string.isRequired,
