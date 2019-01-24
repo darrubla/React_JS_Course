@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux'
 import AppFrame from '../components/AppFrame';
+import { fetchCustomers } from './../actions/fetchCustomers'
 import CustomerList from '../components/CustomerList'
 import CustomerActions from '../components/CustomerActions';
 
-const custom = [
-    {   dni: "20000000",
-        name: "Daniel",
-        age: 31
-    },
-    {   dni: "200000",
-        name: "Juan",
-        age: 32
-    },
-    {   dni: "2000000",
-        name: "Carlos",
-        age: 33
-    }
-];
-
 class CustomersContainer extends Component {
+
+    componentDidMount() {
+        this.props.fetchCustomers();
+    }
 
     handleAddNew = () => {
         this.props.history.push("customers/new");
@@ -42,7 +33,7 @@ class CustomersContainer extends Component {
         return (
             <div>
                 <AppFrame header={"List of clients"}
-                    body={this.renderBody(custom)}
+                    body={this.renderBody(this.props.custom)}
                     //footer={"hola"}
                     >
                 </AppFrame>
@@ -52,8 +43,20 @@ class CustomersContainer extends Component {
 }
 
 CustomersContainer.propTypes = {
-    // header: PropTypes.string,
-    // body: PropTypes.element,
+    fetchCustomers: PropTypes.func.isRequired,
+    custom: PropTypes.array.isRequired,
 };
 
-export default withRouter(CustomersContainer);
+CustomersContainer.defaultProps = {
+    custom: [ ]
+};
+
+const mapStateToProps = state => ({
+    custom: state.custom
+});
+
+// const mapDispatchToProps = {fetchCustomers};
+
+export default withRouter(
+  connect(mapStateToProps, { fetchCustomers })(CustomersContainer)
+);

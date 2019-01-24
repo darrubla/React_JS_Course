@@ -5,7 +5,7 @@ class NewCustomerContainer extends Component {
     render() {
         return (
             <div>
-                buencambiodepagina
+  
             </div>
         );
     }
