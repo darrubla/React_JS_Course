@@ -52,7 +52,7 @@ CustomersContainer.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    custom: state.custom
+    custom: state.customers
 });
 
 // const mapDispatchToProps = {fetchCustomers};
