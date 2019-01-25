@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom'
-import AppFrame from './../components/AppFrame'
-import CustomerActions from './../components/CustomerActions'
+import { Link, withRouter } from 'react-router-dom';
+import AppFrame from './../components/AppFrame';
+import CustomerActions from './../components/CustomerActions';
+import '../index.css';
 
 class HomeContainer extends Component {
     handleOnClick = () => {
@@ -17,7 +18,6 @@ class HomeContainer extends Component {
                     header='home'
                     body={
                         <div>
-                            Esta es la pantalla inicial
                             <CustomerActions>
                                 <button onClick={this.handleOnClick}>List of clients</button>
                                 {/* <Link to="/customers">Listado de Clientes</Link> */}

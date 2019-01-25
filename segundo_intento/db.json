@@ -1,0 +1,37 @@
+{
+  "custom": [
+    {
+
+      "id": "20000000",
+      "name": "Daniel",
+      "age": 31
+    },
+    {
+      "id": "200000",
+      "name": "Juan",
+      "age": 32
+    },
+    {
+      "id": "2000000",
+      "name": "Carlos",
+      "age": 33
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

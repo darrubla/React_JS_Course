@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import HomeContainer from './containers/HomeContainer';
-import CustomersContainer from './containers/CustomersContainer';
+import CustomersListContainer from './containers/CustomerListContainer';
 import NewCustomerContainer from './containers/NewCustomerContainer';
+import CustomerContainer from './containers/CustomerContainer';
 
 class App extends Component {
   // renderHome = () => <h1>Home</h1>;
 
-  renderCustomerContainer = () => <h1>Customer Container</h1>;
+  // renderCustomerContainer = () => <h1>Customer Container</h1>;
 
   // renderCustomerListContainer = () => <h1>Customers List Container</h1>;
 
@@ -19,8 +20,8 @@ class App extends Component {
         <div>
           <Switch>
             <Route path="/customers/new" component={NewCustomerContainer} />
-            <Route path="/customers/:dni" component={this.renderCustomerContainer} />
-            <Route exact path="/customers" component={CustomersContainer} />
+            <Route path="/customers/:dni" render={props => <CustomerContainer dni={props.match.params.dni} />} />
+            <Route exact path="/customers" component={CustomersListContainer} />
             <Route exact path="/" component={HomeContainer} />
           </Switch>
         </div>

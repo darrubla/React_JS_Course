@@ -16,7 +16,7 @@ const AppFrame = ({header, body, footer}) => {
 
 AppFrame.propTypes = {
     header: PropTypes.string.isRequired,
-    body: PropTypes.element.isRequired,
+    body: PropTypes.object.isRequired,
     footer: PropTypes.string,
 };
 

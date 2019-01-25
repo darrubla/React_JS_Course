@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
 import AppFrame from '../components/AppFrame';
-import { fetchCustomers } from './../actions/fetchCustomers'
-import CustomerList from '../components/CustomerList'
+import { fetchCustomers } from '../actions/fetchCustomers';
+import { getCustomers } from '../selectors/customers';
+import CustomerList from '../components/CustomerList';
 import CustomerActions from '../components/CustomerActions';
 
 class CustomersContainer extends Component {
@@ -52,7 +53,7 @@ CustomersContainer.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    custom: state.customers
+    custom: getCustomers(state)
 });
 
 // const mapDispatchToProps = {fetchCustomers};

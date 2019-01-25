@@ -17,6 +17,7 @@ code {
   margin: 5%;
   padding: 30px;
   width: calc(80vw);
+  background-color: #AAA;
 }
 
 .customers-actions {
